@@ -1,0 +1,100 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage[portuguese, english, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{portuguese}
+\babelfont{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+
+% Definição de cores para destaque
+\definecolor{brandblue}{RGB}{24, 76, 120}
+\definecolor{headerbg}{RGB}{235, 242, 250}
+\definecolor{subtlebar}{RGB}{200, 215, 230}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=brandblue,
+    urlcolor=brandblue,
+    pdftitle={Análise SWOT - ModuCore™}
+}
+
+\title{
+    \vspace{-1.5cm}
+    \textsf{\textbf{\Huge \color{brandblue} ModuCore™}}\\[0.2cm]
+    \Large \textsf{Router Modular, Atualizável e Open-Source}\\[0.1cm]
+    \large \textsf{Relatório de Contextualização e Análise SWOT}
+    \vspace{-0.3cm}
+}
+\author{\textbf{Projeto:} ModuCore™ \quad|\quad \textbf{Software Base:} OpenWrt}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-0.4cm}
+\begin{center}
+    \color{subtlebar}\rule{\linewidth}{1pt}
+\end{center}
+\vspace{0.2cm}
+
+\section*{1. Resumo do Produto e Contexto}
+
+O \textbf{ModuCore™} é um conceito inovador de router residencial e empresarial focado na modularidade, longevidade de hardware e total soberania de software. Desenvolvido sob os princípios do \textit{Right to Repair} (Direito à Reparação) e da sustentabilidade ambiental, o ModuCore™ resolve o problema da obsolescência programada no mercado de equipamentos de rede.
+
+\subsection*{Principais Pilares do Produto:}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
+    \item \textbf{Arquitetura Hardware Modular:} A motherboard central aloja o processamento base, permitindo a substituição e \textit{upgrade} independente de módulos como placas Wi-Fi, portas Ethernet (1G/2.5G/10G), módulos de aceleração e fontes de alimentação.
+    \item \textbf{Facilidade de Reparação:} Avarias em componentes específicos não exigem o descarte total do equipamento, reduzindo o \textit{e-waste} e o custo de manutenção ao longo do tempo.
+    \item \textbf{Firmware OpenWrt NATIVO:} Adoção de software livre e transparente que garante atualizações contínuas de segurança, gestão avançada de rede, suporte para VPNs e controlo total por parte do utilizador sem \textit{vendor lock-in}.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\newpage
+\section*{2. Matrix SWOT}
+
+A Tabela~\ref{tab:swot} sintetiza a análise dos fatores internos (Forças e Fraquezas) e externos (Oportunidades e Ameaças) que influenciam o desenvolvimento e o posicionamento do ModuCore™.
+
+\begin{table}[h!]
+\centering
+\small
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{headerbg}
+\textbf{\color{brandblue} FORÇAS (Strengths)} & \textbf{\color{brandblue} FRAQUEZAS (Weaknesses)} \\
+\midrule
+\textbullet{} Modularidade e reparabilidade simples (\textit{Right to Repair}). \par
+\textbullet{} Firmware livre e auditável (OpenWrt). \par
+\textbullet{} Elevada longevidade e sustentabilidade. \par
+\textbullet{} Ausência de \textit{vendor lock-in} e controlo de privacidade. &
+\textbullet{} Custo inicial de produção e I\&D mais elevado. \par
+\textbullet{} Maior dimensão física e complexidade de chassi. \par
+\textbullet{} Curva de aprendizagem inicial para utilizadores leigos. \par
+\textbullet{} Necessidade de gerir stock de múltiplos módulos. \\
+\midrule
+\rowcolor{headerbg}
+\textbf{\color{brandblue} OPORTUNIDADES (Opportunities)} & \textbf{\color{brandblue} AMEAÇAS (Threats)} \\
+\midrule
+\textbullet{} Diretivas europeias de sustentabilidade e reparação. \par
+\textbullet{} Modelo de receita contínuo (\textit{upgrades} de hardware). \par
+\textbullet{} Apelo a nichos em crescimento (entusiastas, PMEs, privacidade). \par
+\textbullet{} Parcerias estratégicas com a comunidade \textit{open-source}. &
+\textbullet{} Concorrência intensa de routers integrados de baixo custo. \par
+\textbullet{} Bloqueios de \textit{drivers} e \textit{firmwares} proprietários. \par
+\textbullet{} Evolução rápida de padrões Wi-Fi (Wi-Fi 7/8). \par
+\textbullet{} Gargalos de velocidade nas barramentos internos. \\
+\bottomrule
+\end{tabularx}
+\caption{Análise SWOT do Router Modular ModuCore™.}
+\label{tab:swot}
+\end{table}
+
+\end{document}
